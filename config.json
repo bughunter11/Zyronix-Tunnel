@@ -1,5 +1,5 @@
 {
-  "Version": 7,
+  "Version": 10,
   "ReleaseNotes": "Added BugTraceX VLESS Server",
   "Servers": [
     {
