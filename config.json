@@ -1,6 +1,6 @@
 {
-  "Version": 1,
-  "ReleaseNotes": "true",
+  "Version": 1.1,
+  "ReleaseNotes": "Zyronix Tunnel Update",
   "Servers": [
     {
       "serverType": 3,
