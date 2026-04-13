@@ -1,0 +1,35 @@
+{
+  "Version": 7,
+  "ReleaseNotes": "Added BugTraceX VLESS Server",
+  "Servers": [
+    {
+      "serverType": 3,
+      "Name": "BugTraceX",
+      "Flag": "in",
+      "Info": "v2ray",
+      "v2ray": "{\n  \"inbounds\": [\n    {\n      \"listen\": \"127.0.0.1\",\n      \"port\": 10808,\n      \"protocol\": \"socks\",\n      \"settings\": {\n        \"auth\": \"noauth\",\n        \"udp\": true,\n        \"userLevel\": 8\n      },\n      \"sniffing\": {\n        \"destOverride\": [\"http\", \"tls\"],\n        \"enabled\": true\n      },\n      \"tag\": \"socks\"\n    },\n    {\n      \"listen\": \"127.0.0.1\",\n      \"port\": 10809,\n      \"protocol\": \"http\",\n      \"settings\": {\n        \"userLevel\": 8\n      },\n      \"tag\": \"http\"\n    }\n  ],\n  \"outbounds\": [\n    {\n      \"protocol\": \"vless\",\n      \"settings\": {\n        \"vnext\": [\n          {\n            \"address\": \"api.jio.com.1992.in\",\n            \"port\": 443,\n            \"users\": [\n              {\n                \"id\": \"c844695b-8ff1-482f-899f-c740fce70fb6\",\n                \"encryption\": \"none\"\n              }\n            ]\n          }\n        ]\n      },\n      \"streamSettings\": {\n        \"network\": \"ws\",\n        \"security\": \"tls\",\n        \"tlsSettings\": {\n          \"serverName\": \"account-gopay.midtrans.com.restar.fleurgaler.biz.id\"\n        },\n        \"wsSettings\": {\n          \"headers\": {\n            \"Host\": \"account-gopay.midtrans.com.restar.fleurgaler.biz.id\"\n          },\n          \"path\": \"/185.127.17.214-1298\"\n        }\n      },\n      \"tag\": \"proxy\"\n    },\n    {\n      \"protocol\": \"freedom\",\n      \"settings\": {},\n      \"tag\": \"direct\"\n    },\n    {\n      \"protocol\": \"blackhole\",\n      \"settings\": {\n        \"response\": {\n          \"type\": \"http\"\n        }\n      },\n      \"tag\": \"block\"\n    }\n  ],\n  \"dns\": {\n    \"servers\": [\"8.8.8.8\"]\n  },\n  \"routing\": {\n    \"domainStrategy\": \"IPIfNonMatch\",\n    \"rules\": []\n  }\n}"
+    },
+    {
+      "serverType": 3,
+      "Name": "BLAC-VLESS",
+      "Flag": "in",
+      "Info": "v2ray",
+      "v2ray": "{\n  \"inbounds\": [\n    {\n      \"listen\": \"127.0.0.1\",\n      \"port\": 10808,\n      \"protocol\": \"socks\",\n      \"settings\": {\n        \"auth\": \"noauth\",\n        \"udp\": true,\n        \"userLevel\": 8\n      },\n      \"sniffing\": {\n        \"destOverride\": [\"http\", \"tls\"],\n        \"enabled\": true\n      },\n      \"tag\": \"socks\"\n    },\n    {\n      \"listen\": \"127.0.0.1\",\n      \"port\": 10809,\n      \"protocol\": \"http\",\n      \"settings\": {\n        \"userLevel\": 8\n      },\n      \"tag\": \"http\"\n    }\n  ],\n  \"outbounds\": [\n    {\n      \"protocol\": \"vless\",\n      \"settings\": {\n        \"vnext\": [\n          {\n            \"address\": \"api.jio.com.1992.in\",\n            \"port\": 80,\n            \"users\": [\n              {\n                \"id\": \"a497f99f-2e4d-49f5-8ba9-b6345daa0af2\",\n                \"encryption\": \"none\"\n              }\n            ]\n          }\n        ]\n      },\n      \"streamSettings\": {\n        \"network\": \"ws\",\n        \"security\": \"none\",\n        \"wsSettings\": {\n          \"headers\": {\n            \"Host\": \"tn1r.eu.cc\"\n          },\n          \"path\": \"/in-amz\"\n        }\n      },\n      \"tag\": \"proxy\"\n    },\n    {\n      \"protocol\": \"freedom\",\n      \"settings\": {},\n      \"tag\": \"direct\"\n    },\n    {\n      \"protocol\": \"blackhole\",\n      \"settings\": {\n        \"response\": {\n          \"type\": \"http\"\n        }\n      },\n      \"tag\": \"block\"\n    }\n  ],\n  \"dns\": {\n    \"servers\": [\"8.8.8.8\"]\n  },\n  \"routing\": {\n    \"domainStrategy\": \"IPIfNonMatch\",\n    \"rules\": []\n  }\n}"
+    },
+    {
+      "serverType": 2,
+      "Name": "BLAC-SSH",
+      "Flag": "in",
+      "Info": "SSH",
+      "Settings": {
+        "sshServer": "api.jio.com.1992.in",
+        "sshPort": "80",
+        "sshUsername": "more",
+        "sshPassword": "more09",
+        "payload": "GET / HTTP/1.1[crlf]Host: gameott.uvicone.in[crlf]Upgrade: websocket[crlf][crlf]",
+        "proxyRemote": "false",
+        "dnsForward": "true"
+      }
+    }
+  ]
+}
